@@ -1,4 +1,4 @@
-package com.example.helloworldexample.goodReads;
+package com.example.demo.goodReads;
 
 public class Book {
     private int BookId;
