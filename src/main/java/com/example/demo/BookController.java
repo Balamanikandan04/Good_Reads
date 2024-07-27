@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.goodReads.Book;
-import com.example.demo.goodReads.Bookservice;
+import com.example.demo.goodReads.BookH2Service;
 
 @RestController
 public class BookController {
-    Bookservice bookService = new Bookservice();
-
+@Autowired
+public BookH2Service bookService;
     @GetMapping("/Books")
     public ArrayList<Book> getBook() {
 
