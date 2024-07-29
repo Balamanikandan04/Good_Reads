@@ -13,11 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.goodReads.Book;
 import com.example.demo.goodReads.BookH2Service;
+import com.example.demo.goodReads.BookJpaService;
 
 @RestController
 public class BookController {
 @Autowired
-public BookH2Service bookService;
+public BookJpaService bookService;
     @GetMapping("/Books")
     public ArrayList<Book> getBook() {
 

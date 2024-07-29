@@ -1,9 +1,23 @@
 package com.example.demo.goodReads;
 
+
+import jakarta.persistence.*;
+
+
+@Entity
+@Table(name="book")
 public class Book {
+
+    @Id
+    @Column(name="bookid")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int BookId;
+    @Column(name="bookname")
     private String BookName;
+    @Column(name="bookimgurl")    
     private String Bookimgurl;
+
+    public Book(){}
 
     public Book(int BookId,String BookName,String Bookimgurl){
         this.BookId=BookId;

@@ -32,6 +32,7 @@ public class BookH2Service implements BookRepository {
     catch(Exception e){
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
+    
 }
 
     @Override
